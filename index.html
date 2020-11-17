@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>Computer Project</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function LoginCheck(){
+                var Username = document.getElementById("UsernameLogin");
+                var Password = document.getElementById("PasswordLogin");
+                var Login = document.getElementById("LoginAll");
+                var Menu = document.getElementById("Header");
+                var All = document.getElementById("All");
+                if (Username.value === "Avinav" && Password.value==="Chalise") {
+                    Login.style.display="none";
+                    Menu.style.display="block";
+                    All.style.display="block";
+                } else {
+                    alert("Wrong Username Or Password");
+                }
+            }
+            $(document).ready(function(){
+                $("#MenuBttn").click(function(){
+                    $("#MenuMain").toggle();
+                });
+            });
+            $(document).ready(function(){
+                $("#CloseMenu").click(function(){
+                    $("#MenuMain").toggle();
+                });
+            });
+            $(document).ready(function(){
+                $("#Back").click(function(){
+                    $("#MenuMain").toggle();
+                    $("#Header").toggle();
+                    $("#All").toggle();
+                    $("#LoginAll").toggle();
+                });
+            });
+            
+        </script>
+        <style>
+            .Login{
+                height: 30%;
+                width: 50%;
+                border-radius: 10%;
+                background-color: black;
+                color: gray;
+                font-size: larger;
+                font-weight: bold;
+                margin-top: 50%;
+                margin-left: 25%;
+            }
+            .LoginUsername{
+                height: 10%;
+                width: 90%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                background-color: #1a1a1a;
+                border: none;
+                border-radius: 45px 45px 45px 45px;
+                transition: 0.3s;
+                text-align: center;
+                color: gray;
+                font-size: larger;
+                font-weight: bold;
+            }
+            .LoginUsername:hover {
+                height: 12.5%;
+                width: 95%;
+                border-radius: 10%;
+            }
+            .LoginPassword{
+                height: 10%;
+                width: 90%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                background-color: #1a1a1a;
+                border: none;
+                border-radius: 45px 45px 45px 45px;
+                transition: 0.3s;
+                text-align: center;
+                color: gray;
+                font-size: larger;
+                font-weight: bold;
+            }
+            .LoginPassword:hover {
+                height: 12.5%;
+                width: 95%;
+                border-radius: 10%;
+            }
+            .LoginButton{
+                height: 10%;
+                width: 25%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                background-image: linear-gradient(to bottom right, #4400ff, #ff7300);
+                border: none;
+                border-radius: 45px 45px 45px 45px;
+                transition: 0.3s;
+                text-align: center;
+                color: #313131;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .LoginButton:hover {
+                height: 12.5%;
+                width: 30%;
+                border-radius: 10%;
+            }
+            .Menu-Header{
+                height: 5%;
+                width: 100%;
+                color: blanchedalmond;
+                background-color: black;
+                font-size: 55px;
+                font-weight: bold;
+                position: fixed;
+            }
+            .Menu-Bttn{
+                height: 100%;
+                width: 18%;
+                background-image: linear-gradient(to right, purple, orange);
+                border: none;
+                border-radius: 45px 45px 45px 45px;
+                margin-left: -38%;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                font-family: cursive;
+            }
+            .Menu{
+                height: 30%;
+                width: 50%;
+                background-color: black;
+                position: fixed;
+                margin-left: 2.5%;
+                overflow-y: scroll;
+            }
+            ::-webkit-scrollbar{
+                height: 10px;
+                width: 20px;
+                background-color: #4747477a;
+            }
+            ::-webkit-scrollbar-track{
+                background-color: #47474700;
+            }
+            ::-webkit-scrollbar-thumb{
+                border-radius: 10px 10px 10px 10px;
+                background-color: rgb(49, 49, 49);
+            }
+            .Option{
+                height: 10%;
+                width: 90%;
+                background-color: rgb(17, 17, 17);
+                border-radius: 45px 45px 45px 45px;
+                border: none;
+                color: gray;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .All{
+                height: 92%;
+                width: 100%;
+                background-color: black;
+                border-radius: 45px 45px 45px 45px;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                padding: 25px;
+            }
+        </style>
+    </head>
+    <body bgcolor="#1a1a1a">
+        <div class="Login" id = "LoginAll" style="display: block;"><center><br><br><br>
+            <font color = "gray">Computer Project</font>
+            <input type="text" class="LoginUsername" placeholder="Username" id="UsernameLogin"><br><br><br>
+            <input type="text" class="LoginPassword" placeholder="Password" id = "PasswordLogin">
+            <br><br><br><button class="LoginButton" onclick="LoginCheck()">Login</button>
+        </center></div>
+        <center>
+            <div class="Menu-Header" id="Header" style="display:none;">
+                <button class="Menu-Bttn" id = "MenuBttn">Menu</button>
+                Computer Project
+            </div><br><br><br><br><br><br>
+            <div class="Menu" id = "MenuMain" style="display: none;"><br>
+                <button class="Option" id="Title">Computer Project</button><br><br>
+                <hr color="#1a1a1a"><br>
+                <a href="https://www.youtube.com/watch?v="><button class="Option" id="How-I-made-this">How We Made This</button></a><br><br>
+                <a href="mailto:avinav.chalise00@gmail.com"><button class="Option" id="Contact-me">Contact Us</button></a><br><br>
+                <a href="#Topic"><button class="Option" id="Go-Directly-To-Topic">Go to topic</button></a><br><br>
+                <button class="Option" id="Back">Back to Login</button><br><br>
+                <button class="Option" id="CloseMenu">Close</button><br><br>
+                <a href="https://www.google.com/"><button class="Option" id="Exit">Exit</button></a>
+            </div>
+            <div class="All" id="All" style="display: none; overflow-y: scroll; margin-top: -17.5%;">
+                <a name="Topic"></a>
+                <font color="Gray"><h1>Someone I admire!</h1></font><br>
+                My dad <font color="Gray"><i>and</i></font> mom are the people I admire <font color="Gray"><i>the most!</i></font> <br><br>
+                They have taught me most of the things. They have taught me how to walk, how to eat, and how to behave! They've taught me about sympathy, about education, and the need of learning. <br> My parents work all day! Either in the house or in their office. My dad and mom do business. My dad is a business man, and my mom is a business woman. <br> <br>
+                My mom, along with the business, does 1household chores. <br><br>
+                My dad comes home really late. Even in the pandemic, he keeps on working, for the sake of the family. <br> <br>
+                He has taught me many moral lessons, like how making too much momey isn't good, and how everythings, as well as happiness comes to an end. They, my mom and dad both are very helpfull. They teach me things I don't know. But that's with the limit. I only ask them stuff every week, as my mom and my dad believe that learning yourselves is the best thing you can do! <br>
+                And, here I am, because of their saying of doing everything yourself. I took keen towards html, so I started learning it even in my free time. I even started it since grade 6.<br><br>
+                Here are the bulletted lists about my parents: -<br><br>
+                <ul>
+                    <li><b><h3>My Dad</h3></b></li>
+                    <li>Status:- Best dad in the world</li>
+                    <li>Name:- Khadananda Chalise</li>
+                    <li>Age:- 43</li>
+                    <li>Status 2:- Business Man</li>
+                    <li>Helps me in many things. Helps me in finding out answers to questions I ask. Mostly about earth and science</li>
+                    <li>Helps me also in finding whether something I do is done in a proper way or not. Like communication.</li>
+                    <li>Conclusion:- He's the best dad in the world of age 43, his name is Khadananda Chalise and is also a business man. Alongside business he also helps me answer certain questions about life and humanity</li>
+                </ul>
+                <ul>
+                    <li><b><h3>My Mom</h3></b></li>
+                    <li>Status:- Best mom in the world</li>
+                    <li>Name:- Bindu Gautam</li>
+                    <li>Age:- Unknown</li>
+                    <li>Status 2 & 3:- Business woman, and house keeper</li>
+                    <li>Also helps me in many things. Helps me in learning household chores, and nepali as a language</li>
+                    <li>Helps me also in getting out of my bad habits. Like watching too much tv, and too much gaming.</li>
+                    <li>Comclusion:- She's the best mom in the world of and unknown age, her name is Bindu Gautam and is a business woman along with a housekeeper. She also teaches me loads of things, like Nepali, and household chores. She also helps me get out of bad habits like watching too much of tv.</li>
+                </ul>
+            </div>
+        </center>
+    </body>
+</html>
